@@ -2759,7 +2759,7 @@ const playgroundData={
 react:[
 ["React in one minute","React builds interfaces from reusable components. A component is normally a function that returns JSX.",
 `function App() {
-  return <h1>Hello React! ⚛️</h1>;
+  return <h1>Hello React!</h1>;
 }`,"Change the heading to your own name.","Edit the text between <h1> and </h1>."],
 ["JSX + JavaScript","JSX can contain JavaScript expressions inside curly braces.",
 `function App() {
@@ -2839,7 +2839,7 @@ react:{jsx:`function App() {
   const [count, setCount] = React.useState(0);
   return (
     <div style={{fontFamily:"Arial",padding:"30px"}}>
-      <h1>Hello React! ⚛️</h1>
+      <h1>Hello React!</h1>
       <p>You clicked {count} times.</p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
@@ -2905,7 +2905,7 @@ pg$("resetCodeBtn").onclick=()=>{
  if(pg.mode==="react")pg.files.react.jsx=`function App() {
   const [count, setCount] = React.useState(0);
   return <div style={{fontFamily:"Arial",padding:"30px"}}>
-    <h1>Hello React! ⚛️</h1>
+    <h1>Hello React!</h1>
     <p>You clicked {count} times.</p>
     <button onClick={() => setCount(count + 1)}>Click me</button>
   </div>;
@@ -2916,3 +2916,22 @@ document.body.innerHTML="<h1>Hello "+name+"!</h1>";`;
  renderPlayground();runPlayground();
 };
 renderPlayground();runPlayground();
+
+
+// Dedicated Coding Playground navigation
+const playgroundNav = document.getElementById("playgroundNav");
+if (playgroundNav) {
+  playgroundNav.addEventListener("click", () => {
+    if (window.location.pathname.endsWith("coding-playground.html")) {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    } else {
+      window.location.href = "coding-playground.html";
+    }
+  });
+}
+const openPlaygroundHome = document.getElementById("openPlaygroundHome");
+if (openPlaygroundHome) {
+  openPlaygroundHome.addEventListener("click", () => {
+    window.location.href = "coding-playground.html";
+  });
+}
