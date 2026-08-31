@@ -38,7 +38,8 @@ footer{padding:30px;text-align:center;color:var(--muted);font-size:12px}
 .learn-strip div{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:13px}
 .learn-strip b{display:block;font-size:13px}.learn-strip span{font-size:11px;color:var(--muted)}
 .playground{display:grid;grid-template-columns:280px minmax(0,1fr);grid-template-rows:360px;gap:15px}
-.lesson-panel,.editor-panel,.preview-panel{background:var(--surface);border:1px solid var(--border);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}
+.lesson-panel,.editor-panel,.preview-panel{background:var(--surface);border:1px solid var(--border);border-radius:15px;box-shadow:var(--shadow)}
+.lesson-panel{overflow:visible;min-width:0}.editor-panel,.preview-panel{overflow:hidden}
 .lesson-panel{padding:20px}.lesson-panel h3{font-size:21px;margin:8px 0}.lesson-panel p{font-size:13px;color:var(--muted)}
 .lesson-example{background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:11px;font:11px ui-monospace,monospace;white-space:pre-wrap;color:var(--text);margin:14px 0}
 .challenge-box{border-left:3px solid var(--primary);padding:10px 12px;background:var(--surface2);border-radius:0 9px 9px 0}.challenge-box p{margin:7px 0}.small-btn{padding:7px 10px;font-size:12px}.hint{display:none}.hint.show{display:block!important}
@@ -48,6 +49,26 @@ footer{padding:30px;text-align:center;color:var(--muted);font-size:12px}
 .preview-head{padding:10px 13px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px}.preview-head span{color:var(--muted)}
 #previewFrame{width:100%;height:100%;min-height:320px;border:0;background:#fff}
 @media(max-width:1100px){.playground{grid-template-columns:1fr;grid-template-rows:auto 360px 360px}.learn-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.learn-strip{grid-template-columns:1fr}.playground{grid-template-rows:auto 360px 340px}}
+@media(max-width:650px){.learn-strip{grid-template-columns:1fr}.playground{grid-template-columns:1fr;grid-template-rows:auto auto auto}.lesson-panel{padding:18px}.lesson-panel h3{font-size:20px}.lesson-example{font-size:10.5px;overflow-x:auto}.challenge-box{margin-top:12px}.editor-panel{min-height:420px}.preview-panel{min-height:340px}#previewFrame{min-height:300px}}
 
 .option-label{vertical-align:middle;line-height:1.45;display:inline-block;max-width:calc(100% - 42px);}
+
+@media(max-width:430px){.playground-section{padding-left:10px;padding-right:10px}.lesson-panel{width:100%;box-sizing:border-box}.lesson-text,.challenge-box p{overflow-wrap:anywhere}.editor-actions span{margin-left:0;width:100%}}
+
+
+/* Dedicated Coding Playground page */
+.playground-cta{margin:28px auto;max-width:1180px;padding:28px;border:1px solid var(--border);border-radius:18px;background:var(--surface);display:flex;align-items:center;justify-content:space-between;gap:24px;box-shadow:var(--shadow)}
+.playground-cta h2{margin:7px 0 8px;font-size:26px}
+.playground-cta p{margin:0;color:var(--muted);line-height:1.6}
+.playground-page{max-width:1280px;margin:0 auto;padding:28px 22px 70px}
+.page-heading{margin-bottom:22px}
+.back-link{display:inline-block;margin-bottom:20px;color:var(--accent);font-weight:700;text-decoration:none}
+.page-heading h1{margin:7px 0 8px;font-size:38px}
+.page-heading p{margin:0;color:var(--muted);font-size:16px}
+.playground-page .playground-section{margin-top:24px}
+@media(max-width:700px){
+  .playground-cta{flex-direction:column;align-items:flex-start}
+  .playground-cta .primary-btn{width:100%}
+  .playground-page{padding:20px 12px 50px}
+  .page-heading h1{font-size:30px}
+}
