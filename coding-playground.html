@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mastery | Notes + 150 MCQs Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="playground-page-body">
+<header class="topbar">
+    <div class="brand">
+      <div class="logo">&lt;/&gt;</div>
+      <div>
+        <h1>Frontend Mastery</h1>
+        <p>HTML • CSS • JavaScript • React</p>
+      </div>
+    </div>
+    <button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button>
+  </header>
+<main class="playground-page">
+  <div class="page-heading">
+    <a class="back-link" href="index.html">← Back to Learning Dashboard</a>
+    <span class="eyebrow">💻 CODING PLAYGROUND</span>
+    <h1>Learn React by building</h1>
+    <p>Edit the code, run it, inspect the result, and solve each mini challenge.</p>
+  </div>
+  <section id="playgroundSection" class="content-section playground-section">
+  <div class="section-title">
+    <div>
+      <span class="eyebrow">LEARN BY CODING</span>
+      <h2>React Quick Coding Lab</h2>
+      <p class="section-subtitle">Learn React step-by-step by editing code, running it, and solving mini challenges.</p>
+    </div>
+    <select id="playgroundMode" class="search">
+      <option value="react">React Fast Track</option>
+      <option value="javascript">JavaScript Basics</option>
+      <option value="htmlcss">HTML + CSS</option>
+    </select>
+  </div>
+  <div class="learn-strip">
+    <div><b>1. Read</b><span>Understand the mini lesson.</span></div>
+    <div><b>2. Type</b><span>Change the starter code.</span></div>
+    <div><b>3. Run</b><span>See the live result.</span></div>
+    <div><b>4. Challenge</b><span>Solve it yourself.</span></div>
+  </div>
+  <div class="playground">
+    <article class="lesson-panel">
+      <span class="module-label">React Fast Track</span>
+      <h3 id="lessonTitle"></h3>
+      <p id="lessonText"></p>
+      <div id="lessonExample" class="lesson-example"></div>
+      <div class="challenge-box">
+        <b>⚡ Mini Challenge</b>
+        <p id="challengeText"></p>
+        <button id="showHintBtn" class="secondary small-btn">Show hint</button>
+        <p id="hintText" class="hint"></p>
+      </div>
+    </article>
+    <article class="editor-panel">
+      <div class="editor-tabs">
+        <button class="editor-tab active" data-file="jsx">App.jsx</button>
+        <button class="editor-tab" data-file="js">script.js</button>
+        <button class="editor-tab" data-file="html">index.html</button>
+        <button class="editor-tab" data-file="css">style.css</button>
+      </div>
+      <textarea id="codeEditor" spellcheck="false"></textarea>
+      <div class="editor-actions">
+        <button class="primary" id="runCodeBtn">▶ Run Code</button>
+        <button class="secondary" id="resetCodeBtn">↺ Reset</button>
+        <button class="secondary" id="nextLessonBtn">Next Lesson →</button>
+        <span id="runStatus"></span>
+      </div>
+    </article>
+    <article class="preview-panel">
+      <div class="preview-head"><b>Live Preview</b><span id="previewLabel">React</span></div>
+      <iframe id="previewFrame" title="Live code preview" sandbox="allow-scripts"></iframe>
+    </article>
+  </div>
+</section>
+</main>
+</body>
+</html>
